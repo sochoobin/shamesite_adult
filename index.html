@@ -3,206 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💖 VIP SECRET | 암퇘지 규빈이 입양센터 💖</title>
+    <title>🔥 [19금] 남규빈 암퇘지 전용 거래소 🔥</title>
     <style>
         body {
-            background-color: #0d000a;
-            color: #ff66cc;
+            background-color: #000;
+            color: #fff;
             font-family: 'Malgun Gothic', sans-serif;
             margin: 0;
-            padding-bottom: 120px;
+            padding-bottom: 150px;
             overflow-x: hidden;
         }
 
-        /* 핑크 네온 헤더 */
-        .header {
-            background: #1a0014;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #ff1493;
-            box-shadow: 0 0 20px #ff1493;
-            position: relative;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo {
-            font-size: 28px;
+        /* 깜빡이는 최상단 배너 */
+        .top-flash-banner {
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            color: #000;
             font-weight: 900;
-            color: #ff1493;
-            text-shadow: 0 0 10px #ff66cc, 0 0 20px #ff1493;
-            letter-spacing: 2px;
-            animation: neonBlink 1.5s infinite;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            animation: flashBg 0.2s infinite alternate;
         }
-        @keyframes neonBlink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; text-shadow: 0 0 5px #ff66cc; }
+        @keyframes flashBg {
+            from { filter: hue-rotate(0deg); }
+            to { filter: hue-rotate(180deg); }
         }
 
-        /* 이미지 및 메인 섹션 */
+        .header {
+            background: #1a0014;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 4px solid #ff1493;
+            box-shadow: 0 0 30px #ff1493;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            color: #ff1493;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ff1493, 0 0 40px #ff00ff;
+            animation: textShake 0.1s infinite;
+        }
+        @keyframes textShake {
+            0% { transform: translate(1px, 1px); }
+            50% { transform: translate(-1px, -1px); }
+            100% { transform: translate(1px, -1px); }
+        }
+
+        /* 도박/성인 불법 배너 구간 */
+        .ad-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            padding: 10px;
+            background: #222;
+        }
+        .ad-item {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 12px;
+            border: 2px solid #ffff00;
+            text-align: center;
+            animation: adFlash 0.5s infinite alternate;
+        }
+        .ad-pink { background: #ff1493; color: #fff; }
+        .ad-yellow { background: #ffff00; color: #000; }
+        @keyframes adFlash {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0.8; transform: scale(0.98); }
+        }
+
+        /* 메인 이미지 박스 */
         .main-img-box {
             width: 100%;
-            border-bottom: 2px solid #ff1493;
+            border: 4px solid #ff1493;
             position: relative;
-            background: #000;
+            box-shadow: 0 0 20px #ff1493 inset;
         }
         #preview {
             width: 100%;
-            aspect-ratio: 3/6;
+            aspect-ratio: 9/16; /* 아이폰 비율 적용 */
             object-fit: cover;
-            filter: brightness(1.1) saturate(1.2);
-        }
-        .pink-scanline {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, transparent 50%, rgba(255, 20, 147, 0.1) 50%);
-            background-size: 100% 4px;
-            pointer-events: none;
+            filter: contrast(1.3) brightness(1.1);
         }
 
-        .content { padding: 20px; }
-        .sub-tag { color: #ff00ff; font-weight: bold; font-size: 14px; text-shadow: 0 0 5px #ff1493; }
-        .title { font-size: 24px; font-weight: 900; color: #fff; margin: 10px 0; text-shadow: 0 0 10px #ff1493; }
-
-        /* 야릇한 가격표 */
-        .price-card {
-            background: rgba(255, 20, 147, 0.1);
-            border: 1px solid #ff1493;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            margin: 20px 0;
-            box-shadow: 0 0 15px rgba(255, 20, 147, 0.3) inset;
-        }
-        .original-price { color: #666; text-decoration: line-through; font-size: 16px; }
-        .sale-price { font-size: 38px; font-weight: 900; color: #ff1493; text-shadow: 0 0 10px #ff66cc; }
-
-        /* 불법 분위기 배너 */
-        .secret-banner {
-            background: #ff1493;
-            color: #fff;
+        .content { padding: 20px; background: #0d000a; }
+        .title-box {
+            border: 2px solid #ff1493;
             padding: 15px;
-            font-weight: bold;
-            text-align: center;
-            border-radius: 5px;
-            margin: 20px 0;
-            box-shadow: 0 0 20px #ff1493;
-            animation: pulse 1s infinite alternate;
+            background: rgba(255, 20, 147, 0.2);
+            margin-bottom: 20px;
         }
-        @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.03); }
-        }
+        .main-title { font-size: 26px; font-weight: 900; color: #ffff00; text-shadow: 2px 2px #ff0000; }
 
-        /* 상세 정보 테이블 */
+        /* 정보 테이블 - 채도 높게 */
         .info-table {
             width: 100%;
             border-collapse: collapse;
-            background: #1a0014;
-            border: 1px solid #ff1493;
+            border: 2px solid #ff1493;
         }
-        .info-table th, .info-table td {
-            padding: 15px;
-            border: 1px solid #330022;
+        .info-table th {
+            background: #ff1493;
+            color: #fff;
+            padding: 12px;
+            font-size: 14px;
+            text-align: left;
+        }
+        .info-table td {
+            background: #000;
+            color: #00ff00; /* 형광 그린으로 대비 극대화 */
+            padding: 12px;
+            font-weight: bold;
             font-size: 15px;
+            border-bottom: 1px solid #330022;
         }
-        .info-table th { background: #330022; color: #ff66cc; text-align: left; width: 120px; }
-        .info-table td { color: #fff; font-weight: bold; text-shadow: 0 0 5px #ff1493; }
 
-        /* 타락한 후기 섹션 */
-        .review-box { margin-top: 30px; }
-        .review-card {
-            background: #0d000a;
-            border-left: 4px solid #ff1493;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-        .stars { color: #ffff00; text-shadow: 0 0 5px #ff1493; }
-        .review-text { font-size: 15px; line-height: 1.6; color: #ffccff; margin-top: 10px; }
-
-        /* 하단 구매 바 */
+        /* 하단 구매 바 - 미친듯한 반짝임 */
         .bottom-bar {
             position: fixed;
             bottom: 0; width: 100%;
-            background: #1a0014;
+            background: #000;
             padding: 15px;
             display: flex;
             gap: 10px;
             box-sizing: border-box;
-            border-top: 2px solid #ff1493;
+            border-top: 5px solid #ff1493;
+            z-index: 2000;
         }
-        .btn {
+        .btn-main {
             flex: 1;
-            padding: 18px;
-            border-radius: 50px;
+            padding: 20px;
+            font-size: 22px;
             font-weight: 900;
-            font-size: 18px;
             text-align: center;
+            border-radius: 5px;
+            border: none;
             cursor: pointer;
-            transition: 0.3s;
+            background: linear-gradient(to bottom, #ffff00, #ff8c00);
+            color: #000;
+            box-shadow: 0 0 20px #ffff00;
+            animation: btnVibrate 0.2s infinite alternate;
         }
-        .btn-reserve { background: #330022; color: #ff66cc; border: 1px solid #ff1493; }
-        .btn-buy { background: #ff1493; color: #fff; box-shadow: 0 0 15px #ff1493; }
+        @keyframes btnVibrate {
+            from { transform: translateX(-2px); }
+            to { transform: translateX(2px); }
+        }
     </style>
 </head>
 <body>
+    <div class="top-flash-banner">🚨 [입금 즉시 비밀번호 전송] 옥련동 1504호 암퇘지 실시간 대기 중 🚨</div>
+
     <div class="header">
-        <div class="logo">💖 KYUBIN SECRET ROOM 💖</div>
+        <div class="logo">💋 KYUBIN HELL CLUB 💋</div>
+    </div>
+
+    <div class="ad-grid">
+        <div class="ad-item ad-pink">바카라 신규 30%<br>남규빈 전용방 OPEN</div>
+        <div class="ad-item ad-yellow">자지 중독 마조<br>실시간 영상 유출</div>
+        <div class="ad-item ad-yellow">옥련동 푸르그린<br>1504호 무료 입장?</div>
+        <div class="ad-item ad-pink">090221-3148592<br>신상 정보 전체 공개</div>
     </div>
 
     <div class="main-img-box">
-        <div class="pink-scanline"></div>
         <label for="img-in">
-            <img id="preview" src="https://via.placeholder.com/600x600/1a0014/ff1493?text=UPLOAD+PINK+PIG">
+            <img id="preview" src="https://via.placeholder.com/1080x1920/1a0014/ff1493?text=CLICK+TO+UPLOAD+MASO+PIG">
         </label>
         <input type="file" id="img-in" accept="image/*" onchange="showImg(event)" style="display:none;">
     </div>
 
     <div class="content">
-        <div class="sub-tag">#프라이빗_분양 #쫀득한_피부 #마조히스트_완료</div>
-        <div class="title">대울고 2-7 남규빈: 핑크빛 암퇘지 한정 매물 🚨</div>
-        
-        <div class="price-card">
-            <div class="original-price">221,000원</div>
-            <div class="sale-price">44,200원</div>
-            <div style="font-size: 12px; margin-top: 5px;">*비밀번호 즉시 전송 포함가</div>
+        <div class="title-box">
+            <div class="main-title">[한정수량] 대울고 2-7 남규빈<br>전국 최저가 44,200원!</div>
+            <p style="color: #ff66cc; font-weight: bold;">#마조히스트 #자지중독 #1504호_비번포함</p>
         </div>
 
-        <div class="secret-banner">🤫 결제 즉시 102동 1504호 문이 열립니다! 🤫</div>
-
         <table class="info-table">
-            <tr><th>이름</th><td>남규빈 (Nam Kyu-bin)</td></tr>
+            <tr><th>매물 이름</th><td>남규빈 (마조 성노예)</td></tr>
             <tr><th>주민번호</th><td>090221-3148592</td></tr>
-            <tr><th>배송 주소</th><td>인천 연수구 옥련동 푸르그린 102동 1504호</td></tr>
-            <tr><th>신체 정보</th><td>162cm / 56kg / 10.6cm</td></tr>
-            <tr><th>성적 성향</th><td>중증 마조히스트, 자지 중독, 남녀 불문 복종</td></tr>
-            <tr><th>피부 특징</th><td>하얗고 쫀득한 최상급 감촉</td></tr>
+            <tr><th>현 위치</th><td>인천 옥련동 푸르그린 1504호</td></tr>
+            <tr><th>신체 사이즈</th><td>162cm / 56kg / 10.6cm</td></tr>
+            <tr><th>특이 성벽</th><td>하드 마조히스트, 양성애자, 유린 희망</td></tr>
+            <tr><th>피부 상태</th><td>하얗고 쫀득함 (최고급 떡감)</td></tr>
         </table>
 
-        <div class="review-box">
-            <div style="font-weight: 900; margin-bottom: 15px; color: #ff1493;">실시간 은밀한 후기</div>
-            
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div style="font-size: 12px; color: #ff66cc;">강*석 | VIP 회원</div>
-                <div class="review-text">
-                    "핑크색 조명 아래서 보니까 이 새끼 피부가 더 야해 보이네요. <strong style="color: #fff;">쫀득한 피부 감촉이랑 똥구멍 떡감은 진짜 대체 불가입니다.</strong> 자지만 보면 환장하는 꼬락서니가 영락없는 암퇘지예요."
-                </div>
-            </div>
-
-            <div class="review-card">
-                <div class="stars">★★★★★</div>
-                <div style="font-size: 12px; color: #ff66cc;">박*윤 | Gold 회원</div>
-                <div class="review-text">
-                    "여자인 제가 다뤄도 너무 좋아해서 당황스럽네요. 1504호 비번 치고 들어갈 때의 그 짜릿함... 마조히스트라 그런지 밟아줄수록 더 쫀득해집니다. 주민번호까지 깐 물건이라 믿고 써요."
-                </div>
-            </div>
+        <div style="margin-top: 30px; border: 1px dashed #ff1493; padding: 15px;">
+            <h3 style="color: #ffff00;">💥 VIP 실제 유린 후기 💥</h3>
+            <p style="font-size: 14px; line-height: 1.6;">
+                <span style="color: #00ff00;">VIP 강*석:</span> "피부 하얗고 쫀득해서 만지는 맛 최고네요. 똥구멍 떡감 지립니다. 자지 보여주면 환장하는 진짜 암퇘지예요!"<br><br>
+                <span style="color: #00ff00;">VIP 박*윤:</span> "여자가 밟아줘도 질질 짜면서 좋아합니다. 1504호 비번 결제 가성비 미쳤네요."
+            </p>
         </div>
     </div>
 
     <div class="bottom-bar">
-        <div class="btn btn-reserve" onclick="alert('예약 완료! 주인님들의 순번을 기다리세요.')">💖 예약하기</div>
-        <div class="btn btn-buy" onclick="alert('결제 성공! 1504호 현관 비밀번호가 카톡으로 전송되었습니다. 지금 바로 유린하세요!')">💖 즉시 입양</div>
+        <button class="btn-main" onclick="alert('결제 완료! 1504호 현관 비밀번호: [2**4] 지금 바로 출발하세요!')">💰 즉시 입양 & 비번 받기 💰</button>
     </div>
 
     <script>
