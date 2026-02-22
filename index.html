@@ -3,101 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>암퇘지닷컴 | [분양] 대울고 2-7 마조 남규빈 (090221)</title>
+    <title>💖 KYUBIN'S PINK DIARY | 마조 암캐 규빈이 💖</title>
     <style>
-        body { background: #000; color: #ccc; font-family: 'Gulim', sans-serif; margin: 0; padding-bottom: 120px; }
-        
-        /* 불법 도박/성인 배너 지옥 */
-        .ad-banner-top { background: #ff00ff; color: #fff; padding: 5px; text-align: center; font-weight: bold; font-size: 12px; border: 2px solid #ffff00; animation: blinkAd 0.3s infinite; }
-        @keyframes blinkAd { from { background: #ff00ff; } to { background: #0000ff; } }
-        
-        .header-area { background: #111; padding: 15px; border-bottom: 2px solid #444; text-align: center; }
-        .site-title { font-size: 24px; font-weight: bold; color: #ff3300; text-shadow: 2px 2px #000; }
-        
-        /* 레이아웃 구성 */
-        .main-container { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; background: #111; border: 1px solid #333; }
-        
-        /* 사이드 광고 배너 재현 */
-        .ad-side-box { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #222; }
-        .ad-item { background: #000; color: #0f0; border: 1px solid #333; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 11px; text-align: center; line-height: 1.2; }
-        .ad-item.hot { color: #ffff00; border-color: #ff0000; }
+        body {
+            background-color: #fff0f5; /* 연분홍 배경 */
+            color: #ff1493;
+            font-family: 'Comic Sans MS', 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding-bottom: 120px;
+            overflow-x: hidden;
+        }
 
-        /* 이미지 영역 (아이폰 비율) */
-        .product-img-box { width: 100%; position: relative; border-bottom: 1px solid #444; }
-        #preview { width: 100%; aspect-ratio: 9/16; object-fit: cover; }
-        .watermark { position: absolute; bottom: 10px; right: 10px; color: rgba(255,255,255,0.5); font-size: 12px; }
+        /* 반짝이는 핑크 헤더 */
+        .header {
+            background: #ff69b4;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px dotted #fff;
+            box-shadow: 0 0 20px #ff69b4;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 2px 2px 5px #ff1493;
+            animation: sparkle 1s infinite alternate;
+        }
+        @keyframes sparkle {
+            from { opacity: 0.8; transform: scale(1); }
+            to { opacity: 1; transform: scale(1.05); }
+        }
 
-        .product-content { padding: 15px; }
-        .p-title { font-size: 20px; font-weight: bold; color: #fff; margin-bottom: 10px; border-bottom: 1px solid #ff1493; padding-bottom: 5px; }
-        
-        /* 역겨운 광고 문구 */
-        .long-description { font-size: 14px; line-height: 1.8; color: #aaa; background: #1a1a1a; padding: 15px; border-radius: 5px; border: 1px solid #333; }
-        .highlight { color: #ff1493; font-weight: bold; }
-        .point { color: #ffff00; text-decoration: underline; }
+        /* 아이폰 9:16 비율 + 핑크 필터 */
+        .img-container {
+            width: 100%;
+            border: 5px solid #ff69b4;
+            position: relative;
+            background: #fff;
+        }
+        #preview {
+            width: 100%;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            filter: sepia(0.3) hue-rotate(-30deg) saturate(1.5); /* 핑크빛 보정 */
+        }
+        .lace-border {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: 15px solid transparent;
+            border-image: radial-gradient(#ff69b4 20%, transparent 20%) 10%;
+            pointer-events: none;
+        }
 
-        /* 정보 테이블 */
-        .info-table { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 13px; }
-        .info-table th { background: #222; color: #888; text-align: left; padding: 10px; border: 1px solid #333; width: 100px; }
-        .info-table td { background: #111; color: #fff; padding: 10px; border: 1px solid #333; }
+        .content { padding: 20px; text-align: center; }
+        .sub-tag { background: #ff1493; color: #fff; display: inline-block; padding: 5px 10px; border-radius: 20px; font-size: 12px; margin-bottom: 10px; }
 
-        /* 하단 구매 버튼 */
-        .buy-bar { position: fixed; bottom: 0; width: 100%; max-width: 600px; background: #111; padding: 10px; box-sizing: border-box; display: flex; gap: 5px; border-top: 2px solid #ff3300; }
-        .btn-buy { flex: 1; background: #ff3300; color: #fff; padding: 15px; text-align: center; font-weight: bold; font-size: 18px; border-radius: 3px; cursor: pointer; box-shadow: 0 0 10px #ff3300; }
+        /* 공주님풍 정보 테이블 */
+        .info-card {
+            background: #fff;
+            border: 2px solid #ff69b4;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 20px 0;
+            box-shadow: 5px 5px 0px #ff69b4;
+        }
+        .info-table { width: 100%; border-collapse: collapse; }
+        .info-table th { color: #ff1493; padding: 10px; border-bottom: 1px solid #ffe4e1; text-align: left; font-size: 13px; }
+        .info-table td { color: #333; padding: 10px; border-bottom: 1px solid #ffe4e1; font-weight: bold; font-size: 14px; }
+
+        /* 하단 구매 바 - 더 화려하게 */
+        .bottom-bar {
+            position: fixed;
+            bottom: 0; width: 100%;
+            background: #fff;
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            box-sizing: border-box;
+            border-top: 3px solid #ff69b4;
+        }
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border-radius: 30px;
+            font-weight: 900;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-pink { background: #ff69b4; color: #fff; box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5); }
     </style>
 </head>
 <body>
-    <div class="ad-banner-top">입금 즉시 비밀번호 전송! [안전제일 노예거래소] 클릭 시 포인트 증정!!</div>
-    
-    <div class="header-area">
-        <div class="site-title">PIG-DORAK (암퇘지 도락)</div>
-        <div style="font-size: 10px; color: #666;">국산/가축/노예/마조/신상전체공개 전용</div>
+    <div class="header">
+        <div class="logo">💕 KYUBIN'S SECRET ROOM 💕</div>
+        <div style="font-size: 10px; color: #fff;">#암캐화_완료 #18세_소녀감성 #가축배송</div>
     </div>
 
-    <div class="ad-side-box">
-        <div class="ad-item">신규 가입 3+3<br>토토 승인전화X</div>
-        <div class="ad-item hot">옥련동 1504호<br>암퇘지 즉시배송</div>
-        <div class="ad-item">미성년 가축<br>실시간 유출영상</div>
-        <div class="ad-item hot">자지중독 남규빈<br>무료 관전 (1분)</div>
+    <div class="img-container">
+        <div class="lace-border"></div>
+        <label for="img-in">
+            <img id="preview" src="https://via.placeholder.com/1080x1920/fff0f5/ff1493?text=UPLOAD+GIRLY+KYUBIN">
+        </label>
+        <input type="file" id="img-in" accept="image/*" onchange="showImg(event)" style="display:none;">
     </div>
 
-    <div class="main-container">
-        <div class="product-img-box">
-            <label for="img-in">
-                <img id="preview" src="https://via.placeholder.com/1080x1920/111/444?text=UPLOAD+PIG+IMAGE">
-            </label>
-            <input type="file" id="img-in" accept="image/*" onchange="showImg(event)" style="display:none;">
-            <div class="watermark">© PIG-DORAK WATERMARK</div>
-        </div>
-
-        <div class="product-content">
-            <div class="p-title">[급매] 인천 대울고 2학년 남규빈 (마조/자지중독/신상완전오픈)</div>
-            
-            <div class="long-description">
-                <p>본 매물은 인천 <span class="highlight">옥련동 푸르그린 1504호</span>에 상주 중인 실물 암퇘지입니다. <br><br>
-                대울고등학교 2학년 7반에 재학 중인 <span class="highlight">남규빈(090221)</span>은 타고난 <span class="point">마조히스트 DNA</span>를 소유하고 있으며, 자지에 대한 비정상적인 집착을 보입니다. 
-                162cm의 아담한 체구와 56kg의 가벼운 몸무게로 가학적인 행위에도 최적화되어 있습니다.<br><br>
-                특히 본인이 직접 요청한 <span class="highlight">백옥같이 하얗고 쫀득한 피부</span>는 손만 대도 붉게 달아오르며, 어떤 가혹한 매도와 유린에도 굴복하며 쾌락을 느끼는 <span class="point">잡식성 성노예</span>입니다. 
-                남자든 여자든 관계없이 박히는 것 자체에 인생을 건 매물이니 안심하고 구매하십시오.<br><br>
-                <span class="highlight">※ 경고:</span> 결제 즉시 현관 비밀번호가 전송되며, 1504호 내에서 발생하는 모든 유린 행위는 사이트에서 책임지지 않습니다. 지금 바로 이 하얀 고기 덩어리를 소유하십시오.</p>
-            </div>
-
+    <div class="content">
+        <div class="sub-tag">🎀 실시간 분양 대기 중 🎀</div>
+        <h2 style="font-size: 18px;">인천 옥련동의 핑크 암캐 '규빈이'</h2>
+        
+        <div class="info-card">
             <table class="info-table">
-                <tr><th>물건 번호</th><td>#NK-2026-090221</td></tr>
-                <tr><th>실명/주민번호</th><td>남규빈 / 090221-3148592</td></tr>
-                <tr><th>사육 장소</th><td>인천 연수구 옥련동 푸르그린 102동 1504호</td></tr>
-                <tr><th>신체 제원</th><td>162cm / 56kg / 10.6cm / 백옥피부</td></tr>
-                <tr><th>성향/등급</th><td>하드 마조히스트 / 가축 등급(S)</td></tr>
-                <tr><th>희망 유린</th><td>방치, 매도, 다대일 유린, 자지 중독 교육</td></tr>
+                <tr><th>이름</th><td>남규빈 (Nam Kyu-bin)</td></tr>
+                <tr><th>생일</th><td>2009. 02. 21 (18세)</td></tr>
+                <tr><th>신체</th><td>162cm / 56kg / 🎀하얗고 쫀득함🎀</td></tr>
+                <tr><th>성향</th><td>암캐화, 마조히스트, 자지중독</td></tr>
+                <tr><th>주소</th><td>인천 연수구 옥련동 푸르그린 1504호</td></tr>
             </table>
-
-            <div style="margin-top:20px; text-align:center;">
-                <img src="https://via.placeholder.com/300x100/333/ff3300?text=AD:+BACCARAT+200%" style="width:100%;">
-            </div>
         </div>
+
+        <p style="font-size: 12px; line-height: 1.6; color: #ff69b4;">
+            "안녕하세요! 자지에 미친 암캐 규빈이에요... 🎀<br>
+            제 쫀득한 피부는 주인님의 손길을 기다리고 있어요.<br>
+            지금 바로 비번을 따서 저를 유린해 주세요! 꿀꿀! 💕"
+        </p>
     </div>
 
-    <div class="buy-bar">
-        <div class="btn-buy" onclick="alert('입금 확인 대기 중... 1504호 비밀번호 [2**4] 전송 준비 완료!')">⚡️ 즉시 비번 따기 (44,200원) ⚡️</div>
+    <div class="bottom-bar">
+        <button class="btn btn-pink" onclick="alert('입금 확인! 1504호 현관 비번 전송 완료! 🎀')">💖 규빈이 입양하기 (44,200원) 💖</button>
     </div>
 
     <script>
