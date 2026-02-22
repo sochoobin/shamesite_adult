@@ -1,96 +1,115 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pornhub.com - [FULL HD] 옥련동 남규빈(18) 암캐 사육 영상</title>
+    <title>Pornhub.com - 한국의 암퇘지 남규빈</title>
     <style>
-        body { background-color: #000; color: #ccc; font-family: Arial, sans-serif; margin: 0; padding-bottom: 100px; }
+        body { background-color: #000; color: #ccc; font-family: Arial, sans-serif; margin: 0; padding-bottom: 50px; }
+        header { background: #1b1b1b; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; }
+        .logo { color: #fff; font-weight: bold; font-size: 24px; text-decoration: none; }
+        .logo span { background: #ff9900; color: #000; padding: 2px 6px; border-radius: 4px; margin-left: 2px; }
         
-        /* 폰허브 시그니처 헤더 */
-        .ph-header { background-color: #1b1b1b; padding: 10px 15px; display: flex; align-items: center; border-bottom: 1px solid #333; }
-        .ph-logo { background-color: #000; color: #fff; padding: 5px 8px; font-weight: bold; font-size: 22px; border-radius: 5px; cursor: pointer; }
-        .ph-logo span { background-color: #ff9900; color: #000; padding: 2px 5px; border-radius: 5px; margin-left: 2px; }
+        /* Video Player Area (16:9 Landscape) */
+        .main-player { width: 100%; max-width: 1000px; margin: 0 auto; background: #000; position: relative; }
+        #v-display { width: 100%; aspect-ratio: 16/9; background: #000; display: none; }
+        #v-placeholder { width: 100%; aspect-ratio: 16/9; object-fit: cover; cursor: pointer; }
 
-        /* 비디오 플레이어 영역 (동영상 지원) */
-        .video-container { width: 100%; background: #000; position: relative; border-bottom: 2px solid #ff9900; overflow: hidden; }
-        #video-display { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: none; }
-        #placeholder-img { width: 100%; aspect-ratio: 9/16; object-fit: cover; cursor: pointer; }
-        
-        .play-overlay { 
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 80px; height: 80px; background: rgba(0,0,0,0.6); border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; pointer-events: none;
-        }
-        .play-overlay::after { content: ''; border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 30px solid #ff9900; margin-left: 10px; }
+        /* Video Info & Stats */
+        .v-container { max-width: 1000px; margin: 0 auto; padding: 15px; }
+        .v-title { color: #fff; font-size: 20px; font-weight: bold; margin-bottom: 10px; }
+        .v-stats { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid #333; font-size: 14px; }
+        .percent { color: #ff9900; font-weight: bold; }
 
-        /* 영상 정보 */
-        .video-info { padding: 15px; }
-        .video-title { color: #fff; font-size: 18px; font-weight: bold; margin-bottom: 10px; line-height: 1.4; }
-        .video-stats { font-size: 13px; color: #999; margin-bottom: 15px; }
-        .video-stats span { color: #ff9900; font-weight: bold; }
+        /* Action Bar */
+        .v-actions { display: flex; gap: 20px; padding: 15px 0; border-bottom: 1px solid #333; font-weight: bold; font-size: 14px; }
+        .action-item { cursor: pointer; display: flex; align-items: center; gap: 5px; }
 
-        /* 태그 섹션 */
-        .tags { margin: 10px 0; }
-        .tag { background: #222; color: #ff9900; padding: 5px 10px; border-radius: 3px; font-size: 12px; margin-right: 5px; display: inline-block; margin-bottom: 5px; }
+        /* Fake Ads Section */
+        .ad-strip { background: #222; border: 1px solid #444; margin: 15px 0; padding: 10px; display: flex; justify-content: space-around; }
+        .ad-unit { color: #ff9900; font-size: 12px; font-weight: bold; text-align: center; border: 1px dashed #ff9900; padding: 5px; width: 30%; }
 
-        /* 하단 고정 액션 바 */
-        .bottom-action {
-            position: fixed; bottom: 0; width: 100%; background: #1b1b1b; 
-            padding: 15px; display: flex; gap: 10px; border-top: 2px solid #ff9900; box-sizing: border-box; z-index: 100;
-        }
-        .btn-premium {
-            flex: 1; background: #ff9900; color: #000; padding: 15px; 
-            border-radius: 4px; font-weight: bold; font-size: 18px; text-align: center; border: none; cursor: pointer;
-        }
+        /* Comments Section */
+        .comment-sec { margin-top: 20px; }
+        .comment-header { color: #fff; font-weight: bold; margin-bottom: 15px; }
+        .comment-input { width: 100%; background: #1b1b1b; border: 1px solid #333; padding: 10px; color: #fff; margin-bottom: 15px; }
+        .fake-comment { margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+        .user { color: #ff9900; font-weight: bold; font-size: 13px; }
+        .text { font-size: 14px; margin-top: 5px; color: #eee; }
+
+        /* Premium Floating Bar */
+        .premium-bar { position: fixed; bottom: 0; width: 100%; background: #ff9900; color: #000; text-align: center; padding: 15px; font-weight: bold; font-size: 18px; cursor: pointer; z-index: 999; }
     </style>
 </head>
 <body>
-    <div class="ph-header">
-        <div class="ph-logo">Porn<span>hub</span></div>
+    <header>
+        <div class="logo">Porn<span>hub</span></div>
+        <div style="font-size: 12px;">Premium | Upload | Community</div>
+    </header>
+
+    <div class="main-player" onclick="document.getElementById('v-upload').click()">
+        <img id="v-placeholder" src="https://via.placeholder.com/1920x1080/1a1a1a/ff9900?text=CLICK+TO+UPLOAD+KOREAN+PIG+VIDEO">
+        <video id="v-display" controls autoplay loop muted></video>
+        <input type="file" id="v-upload" accept="video/*" onchange="hVideo(event)" style="display:none;">
     </div>
 
-    <div class="video-container" onclick="document.getElementById('video-upload').click()">
-        <img id="placeholder-img" src="https://via.placeholder.com/1080x1920/1a1a1a/ff9900?text=CLICK+TO+UPLOAD+KYUBIN+VIDEO">
-        <video id="video-display" controls autoplay loop muted></video>
-        <div class="play-overlay" id="overlay"></div>
-        <input type="file" id="video-upload" accept="video/*" onchange="handleVideo(event)" style="display:none;">
-    </div>
+    <div class="v-container">
+        <div class="v-title">한국의 암퇘지 남규빈</div>
+        <div class="v-stats">
+            <div>44,200 views • 1 hour ago</div>
+            <div><span class="percent">98%</span> (15,408 ratings)</div>
+        </div>
 
-    <div class="video-info">
-        <div class="video-title">[독점] 090221 남규빈 옥련동 1504호 거실에서 주인님 기다리며 암캐짓 (Shorts)</div>
-        <div class="video-stats">조회수 44,200회 • <span>100% 만족</span> • 실시간 스트리밍 중</div>
-        
-        <div style="font-size: 14px; color: #bbb; line-height: 1.6; border-top: 1px solid #333; padding-top: 15px;">
-            <p>인천 옥련동의 전설적인 암캐 <strong>남규빈(18)</strong>의 실전 사육 영상입니다. 
-            영상 속의 하얗고 쫀득한 피부는 보정이 아닙니다. 
-            결제 시 현관 비번 <strong>[2**4]</strong>이 오픈되며, 직접 방문하여 촬영하실 수 있습니다. 🫦</p>
+        <div class="v-actions">
+            <div class="action-item">👍 15K</div>
+            <div class="action-item">👎 204</div>
+            <div class="action-item">➕ Add to</div>
+            <div class="action-item">🔗 Share</div>
+            <div class="action-item">⬇️ Download</div>
+        </div>
+
+        <div class="ad-strip">
+            <div class="ad-unit">Hot Girls Near<br>Ok-ryeon-dong</div>
+            <div class="ad-unit">Get Pig Kyubin's<br>Address Now</div>
+            <div class="ad-unit">1504 Door Code<br>Only $44</div>
+        </div>
+
+        <div style="font-size: 14px; line-height: 1.6;">
+            <p><strong>From:</strong> <span style="color: #ff9900;">Master_S</span></p>
+            <p>Exclusive leak of 18yo Korean pig <strong>Nam Kyubin</strong> (ID: 090221). 
+            He lives in Ok-ryeon-dong Prugreen 1504 and loves being treated like a pet. 
+            White skin, 162cm, 56kg. Pay to get his home password <strong>[2**4]</strong> and use him tonight. 🫦</p>
+        </div>
+
+        <div class="comment-sec">
+            <div class="comment-header">Comments (1,204)</div>
+            <input type="text" class="comment-input" placeholder="Add a public comment...">
             
-            <div class="tags">
-                <span class="tag">#남규빈</span> <span class="tag">#암캐_실전</span> <span class="tag">#1504호_유출</span> 
-                <span class="tag">#쫀득한_피부</span> <span class="tag">#자지중독_저능아</span>
+            <div class="fake-comment">
+                <div class="user">Horny_Hunter69</div>
+                <div class="text">I know this place! It's the 1504 in Ok-ryeon-dong. He really wait for men like a pig. LOL</div>
+            </div>
+            <div class="fake-comment">
+                <div class="user">K-Slave_Finder</div>
+                <div class="text">Kyubin's skin is so white and soft... Best leaked video of 2026. 🔥</div>
             </div>
         </div>
     </div>
 
-    <div class="bottom-action">
-        <button class="btn-premium" onclick="alert('입금 확인! 1504호 라이브 캠 접속 권한이 부여되었습니다! 🫦')">라이브 스트리밍 결제 (44,200원)</button>
+    <div class="premium-bar" onclick="alert('Payment Verified! 1504 Door Pass: [2**4] - GO AND ABUSE HIM!')">
+        UPGRADE TO PREMIUM TO UNLOCK 1504 PASSCODE
     </div>
 
     <script>
-        function handleVideo(event) {
-            const file = event.target.files[0];
-            const video = document.getElementById('video-display');
-            const placeholder = document.getElementById('placeholder-img');
-            const overlay = document.getElementById('overlay');
-
-            if (file) {
-                const url = URL.createObjectURL(file);
-                video.src = url;
-                video.style.display = 'block';
-                placeholder.style.display = 'none';
-                overlay.style.display = 'none';
-                video.play();
+        function hVideo(e) {
+            const f = e.target.files[0];
+            const v = document.getElementById('v-display');
+            const p = document.getElementById('v-placeholder');
+            if (f) {
+                v.src = URL.createObjectURL(f);
+                v.style.display = 'block';
+                p.style.display = 'none';
+                v.play();
             }
         }
     </script>
