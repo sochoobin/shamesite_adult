@@ -123,46 +123,49 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-    </style>
-</head>
-<body>
-    <div class="neon-banner">⚠️ [긴급매물] 090221 남규빈 - 입금 즉시 현관 비번 전송 ⚠️</div>
+    <style>
+    /* 미친 듯이 깜빡이는 하이라이트 효과 */
+    .blink-red { animation: blinker 0.2s linear infinite; color: #ff0000; font-weight: 900; }
+    @keyframes blinker { 50% { opacity: 0; } }
 
-    <div class="ad-grid">
-        <div class="ad-item highlight">바카라 신규 30%<br>남규빈 전용방</div>
-        <div class="ad-item">미성년 암캐<br>실시간 유출중</div>
-        <div class="ad-item">1504호 비번<br>단돈 4만원</div>
-        <div class="ad-item highlight">자지중독 규빈<br>무료 관전 클릭</div>
-    </div>
+    /* 불법 배너 스타일 */
+    .ad-banner-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        padding: 10px;
+        background: #ffff00; /* 형광 노랑 배경으로 시선 강탈 */
+    }
+    .ad-box {
+        background: #000;
+        border: 2px solid #ff00ff;
+        color: #fff;
+        font-size: 10px;
+        text-align: center;
+        padding: 5px;
+        line-height: 1.2;
+    }
+    .ad-box span { color: #ffff00; font-weight: bold; }
 
-    <div class="img-box">
-        <label for="img-in">
-            <img id="preview" src="https://via.placeholder.com/1080x1920/1a0014/ff00ff?text=CLICK+TO+UPLOAD+HOT+PIG">
-        </label>
-        <input type="file" id="img-in" accept="image/*" onchange="showImg(event)" style="display:none;">
-    </div>
+    /* 네온 텍스트 강화 */
+    .neon-text {
+        color: #fff;
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        font-style: italic;
+    }
+</style>
 
-    <div class="content">
-        <div class="title">💖 [실물보장] 대울고 2-7 남규빈 💖</div>
-        
-        <table class="info-table">
-            <tr><th>이름/나이</th><td>남규빈 / 18세(090221)</td></tr>
-            <tr><th>신체정보</th><td>162cm / 56kg / 10.6cm</td></tr>
-            <tr><th>성향/특징</th><td>중증 마조, 암캐화, 하얀피부</td></tr>
-            <tr><th>사육장소</th><td>인천 옥련동 푸르그린 1504호</td></tr>
-        </table>
+<div class="ad-banner-grid">
+    <div class="ad-box"><span class="blink-red">LIVE</span><br>카지노 3+3<br><span>남규빈 전용</span></div>
+    <div class="ad-box">🔞청소년🔞<br>암캐 유출<br><span>[무삭제]</span></div>
+    <div class="ad-box">1504호<br>비번 공유<br><span class="blink-red">CLICK</span></div>
+</div>
 
-        <div style="margin-top: 20px; border: 1px dashed #ffff00; padding: 10px; font-size: 13px; line-height: 1.6;">
-            <p style="color: #0f0;">[VIP 후기] "이 새끼 1504호 비번 치고 들어가면 거실에서 리본만 달고 기다리고 있습니다. 피부가 쫀득해서 밟아주는 맛이 일품이에요. 자지에 미친 진짜 암캐입니다."</p>
-        </div>
-    </div>
+<div style="background: #ff00ff; color: #fff; text-align: center; font-size: 14px; font-weight: 900; padding: 10px; margin: 15px 0;">
+    🚨 경축! 대울고 남규빈 암캐화 1주년 기념 50% 할인 🚨
+</div>
 
-    <div class="bottom-bar">
-        <button class="btn-buy" onclick="alert('결제 성공! 1504호 비번: [2**4] 지금 바로 유린하세요!')">💰 즉시 입양 & 비번 따기 💰</button>
-    </div>
-
-    <script>
-        function showImg(e) { var o = document.getElementById('preview'); o.src = URL.createObjectURL(e.target.files[0]); }
-    </script>
-</body>
-</html>
+<p style="text-align: center;">
+    <span class="neon-text">#실시간_사육 #옥련동_가축 #주민번호_090221_박제</span><br>
+    <img src="https://via.placeholder.com/400x50/ff00ff/ffffff?text=CLICK+TO+BUY+KYUBIN+NOW" style="width: 100%; margin: 10px 0;">
+</p>
