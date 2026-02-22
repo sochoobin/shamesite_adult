@@ -3,169 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚨 [19금] 암퇘지닷컴 | No.1 매물 남규빈(18) 🚨</title>
+    <title>🫦 [VIP 전용] 옥련동 1504호 핑크 암캐 규빈이 분양소 🫦</title>
+    <meta name="keywords" content="남규빈, 암퇘지 남규빈, 대울고 남규빈, 090221, 남규빈 주소, 마조히스트 남규빈, 1504호">
     <style>
-        body {
-            background-color: #000;
-            color: #ff00ff;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding-bottom: 150px;
-        }
+        body { background-color: #000; color: #ff00ff; font-family: 'Malgun Gothic', sans-serif; margin: 0; padding-bottom: 120px; overflow-x: hidden; }
+        
+        /* 핫핑크 네온 전광판 */
+        .neon-header { background: #1a001a; padding: 25px; text-align: center; border-bottom: 4px solid #ff00ff; box-shadow: 0 0 20px #ff00ff; }
+        .neon-title { font-size: 26px; font-weight: 900; color: #fff; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; animation: flicker 1s infinite; }
+        @keyframes flicker { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
 
-        /* 미친 듯이 깜빡이는 상단 전광판 */
-        .neon-banner {
-            background: #ff00ff;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            font-weight: 900;
-            font-size: 16px;
-            text-shadow: 0 0 10px #fff;
-            animation: flash 0.3s infinite alternate;
-        }
-        @keyframes flash {
-            from { background: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
-            to { background: #ff1493; box-shadow: 0 0 40px #ff1493; }
-        }
+        /* 불법 광고 배너 도배 */
+        .ad-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #ffff00; padding: 2px; }
+        .ad-box { background: #000; color: #0f0; font-size: 10px; padding: 8px; text-align: center; font-weight: bold; border: 1px solid #ff00ff; }
+        .blink { animation: blinker 0.4s linear infinite; color: #ff0000; }
+        @keyframes blinker { 50% { opacity: 0; } }
 
-        /* 불법 도박/조건만남 스타일 광고 배너 */
-        .ad-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2px;
-            background: #ffff00;
-            padding: 2px;
-        }
-        .ad-item {
-            background: #000;
-            color: #0f0;
-            font-size: 11px;
-            padding: 8px;
-            text-align: center;
-            font-weight: bold;
-            border: 1px solid #ff00ff;
-        }
-        .ad-item.highlight { color: #ffff00; animation: blink 0.5s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
+        /* 메인 매물 이미지 (아이폰 비율) */
+        .img-wrap { width: 100%; border-top: 2px solid #ff00ff; border-bottom: 2px solid #ff00ff; position: relative; }
+        #preview { width: 100%; aspect-ratio: 9/16; object-fit: cover; filter: saturate(1.6) contrast(1.1); }
+        .overlay-text { position: absolute; bottom: 10px; right: 10px; background: rgba(255,0,255,0.7); color: #fff; padding: 5px; font-size: 12px; font-weight: bold; }
 
-        /* 메인 이미지 - 아이폰 비율 + 강렬한 대비 */
-        .img-box {
-            width: 100%;
-            border-top: 3px solid #ff00ff;
-            border-bottom: 3px solid #ff00ff;
-            position: relative;
-        }
-        #preview {
-            width: 100%;
-            aspect-ratio: 9/16;
-            object-fit: cover;
-            filter: saturate(1.8) contrast(1.2); /* 채도 폭발 */
-        }
+        /* 상품 상세 설명 */
+        .detail-section { padding: 20px; background: linear-gradient(to bottom, #110011, #000); }
+        .price { font-size: 38px; font-weight: 900; color: #ffff00; text-align: center; text-shadow: 0 0 10px #ffff00; margin-bottom: 15px; }
+        .desc-text { font-size: 14px; line-height: 1.8; color: #ffccff; border: 1px dashed #ff00ff; padding: 15px; border-radius: 10px; }
+        .highlight { color: #fff; font-weight: bold; text-shadow: 0 0 5px #ff00ff; }
 
-        /* 정보 섹션 */
-        .content { padding: 15px; background: linear-gradient(to bottom, #1a0014, #000); }
-        .title {
-            font-size: 22px;
-            font-weight: 900;
-            color: #ffff00;
-            text-shadow: 2px 2px #ff00ff;
-            text-align: center;
-            margin: 15px 0;
-        }
+        /* 매물 명세표 */
+        .spec-table { width: 100%; margin-top: 20px; border-collapse: collapse; background: #000; }
+        .spec-table th { background: #ff00ff; color: #fff; padding: 10px; font-size: 12px; }
+        .spec-table td { border: 1px solid #ff00ff; padding: 10px; color: #fff; font-weight: bold; text-align: center; font-size: 13px; }
 
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 2px solid #ff00ff;
-            background: #000;
-        }
-        .info-table th {
-            background: #ff00ff;
-            color: #fff;
-            padding: 10px;
-            font-size: 13px;
-        }
-        .info-table td {
-            padding: 10px;
-            border: 1px solid #330022;
-            color: #fff;
-            font-weight: bold;
-            text-align: center;
-        }
+        /* 하단 구매 바 (Violent Shake!) */
+        .bottom-bar { position: fixed; bottom: 0; width: 100%; background: rgba(0,0,0,0.9); padding: 15px; border-top: 3px solid #ffff00; box-sizing: border-box; }
+        .btn-buy { width: 100%; background: #ff00ff; color: #fff; padding: 18px; border-radius: 10px; font-weight: 900; font-size: 22px; border: none; box-shadow: 0 0 20px #ff00ff; cursor: pointer; animation: shake 0.5s infinite; }
+        @keyframes shake { 0% { transform: translate(1px, 1px) rotate(0deg); } 10% { transform: translate(-1px, -2px) rotate(-1deg); } 30% { transform: translate(3px, 2px) rotate(0deg); } 50% { transform: translate(-1px, 2px) rotate(1deg); } 100% { transform: translate(1px, -2px) rotate(-1deg); } }
+    </style>
+</head>
+<body>
+    <div class="ad-row">
+        <div class="ad-box"><span class="blink">HOT</span><br>1504호<br>실시간 유출</div>
+        <div class="ad-box">💰입금시💰<br>남규빈<br>현관비번전송</div>
+        <div class="ad-box"><span class="blink">DANGER</span><br>대울고<br>암캐 사육중</div>
+    </div>
 
-        /* 하단 구매 바 - 빤짝거리는 효과 */
-        .bottom-bar {
-            position: fixed;
-            bottom: 0; width: 100%;
-            background: rgba(0,0,0,0.9);
-            padding: 15px;
-            display: flex;
-            gap: 10px;
-            box-sizing: border-box;
-            border-top: 4px solid #ffff00;
-        }
-        .btn-buy {
-            flex: 1;
-            background: linear-gradient(45deg, #ff00ff, #ff1493, #ffff00);
-            background-size: 200% 200%;
-            color: #000;
-            padding: 18px;
-            border-radius: 5px;
-            font-weight: 900;
-            font-size: 20px;
-            border: none;
-            animation: gradientMove 1s infinite;
-            cursor: pointer;
-        }
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-    <style>
-    /* 미친 듯이 깜빡이는 하이라이트 효과 */
-    .blink-red { animation: blinker 0.2s linear infinite; color: #ff0000; font-weight: 900; }
-    @keyframes blinker { 50% { opacity: 0; } }
+    <div class="neon-header">
+        <div class="neon-title">🔞 핑크 네온 암캐 : 남규빈 🔞</div>
+    </div>
 
-    /* 불법 배너 스타일 */
-    .ad-banner-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5px;
-        padding: 10px;
-        background: #ffff00; /* 형광 노랑 배경으로 시선 강탈 */
-    }
-    .ad-box {
-        background: #000;
-        border: 2px solid #ff00ff;
-        color: #fff;
-        font-size: 10px;
-        text-align: center;
-        padding: 5px;
-        line-height: 1.2;
-    }
-    .ad-box span { color: #ffff00; font-weight: bold; }
+    <div class="img-wrap">
+        <label for="img-upload">
+            <img id="preview" src="https://via.placeholder.com/1080x1920/1a001a/ff00ff?text=CLICK+TO+UPLOAD+KYUBIN+PIG">
+        </label>
+        <div class="overlay-text">LIVE: 옥련동 푸르그린</div>
+        <input type="file" id="img-upload" accept="image/*" onchange="loadImg(event)" style="display:none;">
+    </div>
 
-    /* 네온 텍스트 강화 */
-    .neon-text {
-        color: #fff;
-        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-        font-style: italic;
-    }
-</style>
+    <div class="detail-section">
+        <div class="price">💰 44,200원 💰</div>
+        <div class="desc-text">
+            <span class="highlight">[긴급 매물 설명]</span><br>
+            본 매물은 자지밖에 모르는 저능아 <span class="highlight">남규빈(18세)</span>입니다. 인천 <span class="highlight">옥련동 1504호</span>에 상주하며, 주인님의 명령이라면 백화점 화장실에서도 사진을 찍어 올리는 완벽한 가축입니다. <br><br>
+            162cm / 56kg의 가냘픈 몸과 <span class="highlight">쫀득한 하얀 피부</span>는 유린당할 때 가장 빛이 납니다. 주민번호 <span class="highlight">090221-3******</span>로 박제된 이 암캐는 결제 즉시 당신의 소유가 됩니다. 현관 비번 <span class="highlight">[2**4]</span>를 누르고 들어가 이 핑크색 노예를 마음껏 사육하십시오. 꿀꿀! 🫦
+        </div>
 
-<div class="ad-banner-grid">
-    <div class="ad-box"><span class="blink-red">LIVE</span><br>카지노 3+3<br><span>남규빈 전용</span></div>
-    <div class="ad-box">🔞청소년🔞<br>암캐 유출<br><span>[무삭제]</span></div>
-    <div class="ad-box">1504호<br>비번 공유<br><span class="blink-red">CLICK</span></div>
-</div>
+        <table class="spec-table">
+            <tr><th>매물 이름</th><td>남규빈 (마조 암캐)</td></tr>
+            <tr><th>신체 조건</th><td>162cm / 56kg / 10.6cm</td></tr>
+            <tr><th>특이 사항</th><td>저능아 성향, 자지 중독</td></tr>
+        </table>
+    </div>
 
-<div style="background: #ff00ff; color: #fff; text-align: center; font-size: 14px; font-weight: 900; padding: 10px; margin: 15px 0;">
-    🚨 경축! 대울고 남규빈 암캐화 1주년 기념 50% 할인 🚨
-</div>
+    <div class="bottom-bar">
+        <button class="btn-buy" onclick="alert('결제 성공! 1504호 비번: [2**4] 지금 바로 유린하러 가세요! 🫦')">💖 지금 바로 비번 따기 💖</button>
+    </div>
 
-<p style="text-align: center;">
-    <span class="neon-text">#실시간_사육 #옥련동_가축 #주민번호_090221_박제</span><br>
-    <img src="https://via.placeholder.com/400x50/ff00ff/ffffff?text=CLICK+TO+BUY+KYUBIN+NOW" style="width: 100%; margin: 10px 0;">
-</p>
+    <script>
+        function loadImg(e) { var o = document.getElementById('preview'); o.src = URL.createObjectURL(e.target.files[0]); }
+    </script>
+</body>
+</html>
